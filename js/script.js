@@ -5,6 +5,11 @@ let resultat2 = document.getElementById("resultat2");
 let input2 = document.getElementById("input2");
 let botton2 = document.getElementById("button2");
 let forma = document.getElementById("forma");
+let resultat3 = document.getElementById("resultat3");
+let input3 = document.getElementById("input3");
+let inverteix = document.getElementById("inverteix");
+let afegeix = document.getElementById("afegeix");
+let array = []; 
 
 botton1.onclick = function(){
     let resultat1 = input.value.replaceAll(" ", "").toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -29,3 +34,12 @@ botton2.onclick = function (){
 
 }
 
+afegeix.onclick = function () {
+    array[array.length] = input3.value;
+    resultat3.value = array;
+}
+
+inverteix.onclick = function(){
+    array.reverse();
+    resultat3.value = array;
+}
